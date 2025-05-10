@@ -8,9 +8,9 @@ contract Factory {
     address operator;
     address temp;
 
-    function create(address _owner) external {
+    function create(address _owner) external returns (MetaphoricProxy) {
         temp = _owner;
-        MetaphoricProxy addr = new MetaphoricProxy(_owner);
+        return new MetaphoricProxy(_owner);
     }
 
     function setup() external {

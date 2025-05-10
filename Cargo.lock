@@ -4270,6 +4270,7 @@ dependencies = [
  "ethers",
  "mini-alloc",
  "stylus-sdk",
+ "tiny-keccak",
  "tokio",
 ]
 

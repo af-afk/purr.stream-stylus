@@ -13,6 +13,7 @@ alloy-primitives = { version = "=0.8.20", default-features = false, features = [
 alloy-sol-types = "=0.8.20"
 mini-alloc = "0.8.4"
 stylus-sdk = "0.8.4"
+tiny-keccak = "2.0.2"
 
 [dev-dependencies]
 tokio = { version = "1.12.0", features = ["full"] }
@@ -28,6 +29,7 @@ name = "stylus-hello-world"
 path = "src/main.rs"
 
 [lib]
+name = "libpurrstream"
 crate-type = ["lib", "cdylib"]
 
 [profile.release]
@@ -35,7 +37,4 @@ codegen-units = 1
 strip = true
 lto = true
 panic = "abort"
-
-# If you need to reduce the binary size, it is advisable to try other
-# optimization levels, such as "s" and "z"
-opt-level = 3
+opt-level = "s"

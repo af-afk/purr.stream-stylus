@@ -5,7 +5,7 @@ interface IFactoryCallback {
     function setup() external;
 }
 
-contract MetamorphicProxy {
+contract MetaphoricProxy {
     address immutable public FACTORY;
     address immutable public IMPLEMENTATION;
 
@@ -13,7 +13,7 @@ contract MetamorphicProxy {
         FACTORY = msg.sender;
         IMPLEMENTATION = _impl;
         // You would set the slot for the implementation here so explorers understand you.
-        (bool rc, _) = _factory.delegatecall(abi.encodeWithSelector(IFactoryCallback.setup.selector));
+        (bool rc,) = FACTORY.delegatecall(abi.encodeWithSelector(IFactoryCallback.setup.selector));
         require(rc);
     }
 

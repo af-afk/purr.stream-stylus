@@ -138,3 +138,15 @@ impl Storage {
         self.cat_donations.getter(self.epoch_count.get()).get(cat)
     }
 }
+
+#[no_mangle]
+#[cfg(not(target_arch = "wasm32"))]
+pub unsafe extern "C" fn native_keccak256(bytes: *const u8, len: usize, output: *mut u8) {
+    use core::slice;
+    use tiny_keccak::{Hasher, Keccak};
+    let mut hasher = Keccak::v256();
+    let data = unsafe { slice::from_raw_parts(bytes, len) };
+    hasher.update(data);
+    let output = unsafe { slice::from_raw_parts_mut(output, 32) };
+    hasher.finalize(output);
+}
