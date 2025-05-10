@@ -25,11 +25,11 @@ export-abi = ["stylus-sdk/export-abi"]
 debug = ["stylus-sdk/debug"]
 
 [[bin]]
-name = "stylus-hello-world"
+name = "purr-stream-stylus"
 path = "src/main.rs"
 
 [lib]
-name = "libpurrstream"
+#name = "libpurrstream"
 crate-type = ["lib", "cdylib"]
 
 [profile.release]
