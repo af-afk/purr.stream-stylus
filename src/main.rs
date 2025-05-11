@@ -6,7 +6,7 @@ pub extern "C" fn main() {}
 
 #[cfg(feature = "export-abi")]
 fn main() {
-    libpurrstream::print_abi("MIT-OR-APACHE-2.0", "pragma solidity ^0.8.23;");
+    purrstreamstylus::print_abi("MIT-OR-APACHE-2.0", "pragma solidity ^0.8.23;");
 }
 
 #[panic_handler]

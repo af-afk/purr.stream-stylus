@@ -3360,6 +3360,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "purrstreamstylus"
+version = "0.1.11"
+dependencies = [
+ "alloy-primitives",
+ "alloy-sol-types",
+ "ethers",
+ "mini-alloc",
+ "stylus-sdk",
+ "tiny-keccak",
+ "tokio",
+]
+
+[[package]]
 name = "quick-error"
 version = "1.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4259,19 +4272,6 @@ dependencies = [
  "alloy-sol-types",
  "cfg-if",
  "dyn-clone",
-]
-
-[[package]]
-name = "stylus-hello-world"
-version = "0.1.11"
-dependencies = [
- "alloy-primitives",
- "alloy-sol-types",
- "ethers",
- "mini-alloc",
- "stylus-sdk",
- "tiny-keccak",
- "tokio",
 ]
 
 [[package]]
